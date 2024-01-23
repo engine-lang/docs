@@ -94,6 +94,8 @@ cargo run "test.en.byte" --vm
 it will interprete the file
 
 
+__
+
 # # Comments
 
 ## ## Single line comment
@@ -206,6 +208,9 @@ This is the precedence of the operators
 7. ( || )
 
 
+__
+
+
 # # Print Statement
 To print a variable you can do
 ```ex
@@ -217,6 +222,9 @@ or you can print a statement directly
 ```ex
 print("Hello, " + "World !!!")
 ```
+
+
+__
 
 
 # # Input Statement
@@ -247,6 +255,9 @@ print(x)
 ```
 
 it take the input and assign the result sum value to `x` variable.
+
+
+__
 
 
 # # If Statement
@@ -302,6 +313,9 @@ else{
 ```
 
 
+__
+
+
 # # For Loop
 
 ## ## Syntax
@@ -346,6 +360,9 @@ for i in (0, 10, 1){
 }
 ```
 
+__
+
+
 ## ## Break Statement
 You can define break statement inside for loop statement like this
 
@@ -375,11 +392,17 @@ for i in (start, end, step){
 }
 ```
 
+__
+
 
 # # Byte Code
 
 ## ## Introduction
 This is the byte code instructions that will be generated if you want to compile the code into byte code.
+
+
+____
+
 
 ## ## `EngineByteCode` Instruction
 This is the first instruction in the file
@@ -388,6 +411,8 @@ This is the first instruction in the file
 * `LINE` => is the current instruction line, it will start from `0`
 * `EngineByteCode` => Instruction Type
 * `v0.1.0` => Current version
+
+____
 
 
 ## ## `Assign` Instruction
@@ -410,6 +435,9 @@ This instruction is used to create new variable then assign it with value.
 10:Assign:string:"variable_6":"Hello, World!"
 ```
 
+____
+
+
 ## ## `Convert` Instruction
 This instruction is used to convert the value from type to another.
 
@@ -427,6 +455,8 @@ This instruction is used to convert the value from type to another.
 6:Convert:double:"Variable3":"Variable4"
 7:Convert:char:"Variable5":"Variable6"
 ```
+
+____
 
 
 ## ## `Operation` Instruction
@@ -451,6 +481,9 @@ This is the operations instruction
 7:Operation:And:"Variable5":"Variable4":"Variable3"
 ```
 
+____
+
+
 ## ## `Print` Instruction
 This is the print instruction
 
@@ -463,6 +496,8 @@ This is the print instruction
 ```ex
 5:Print:"Variable"
 ```
+
+____
 
 
 ## ## `Input` Instruction
@@ -478,6 +513,8 @@ This is the input instruction.
 ```ex
 18:Input:"temp_stack1_variable_7"
 ```
+
+____
 
 
 ## ## `If` Instruction
@@ -495,6 +532,8 @@ This is the if control flow instruction.
 227:If:"temp_stack2_variable_108":234
 ```
 
+____
+
 
 ## ## `GoTo` Instruction
 This is the Go to instruction, which is used to just go for another line.
@@ -509,12 +548,12 @@ This is the Go to instruction, which is used to just go for another line.
 233:GoTo:246
 ```
 
+____
 
 
 ## ## `End` Instruction
 This is the last byte code instruction to be generated
 
-### ### Instruction Construction
 `LINE:End:`
 * `LINE` => is the current instruction line
 * `End` => Instruction Type
