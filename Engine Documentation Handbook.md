@@ -63,7 +63,7 @@ hello, world!!!!
 ```
 
 
-## Generate byte Code
+## ## Generate byte Code
 You can generate a byte code like this
 ```bash
 cargo run "test.en" -b
@@ -86,7 +86,7 @@ it will generate a file called `test.en.byte` in this format
 you can then use it to your specific cases, or you can run it using engine vm
 
 
-## Run engine as VM(Virtual Machine)
+## ## Run engine as VM(Virtual Machine)
 To execute the engine byte code file, you can run
 ```bash
 cargo run "test.en.byte" --vm
